@@ -5,7 +5,8 @@ local map = vim.keymap.set
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- Template Cpp
-map("n", "main", "<cmd>Template T-cpp<cr>")
+map("n", "main", "<cmd>Template main<cr>")
+-- map("n", "ab", "<cmd>Template ab<cr>")
 
 -- Markdown Preview
 map("n", "<leader>mp", "<cmd>MarkdownPreview<cr>", { desc = "Markdown Preview" })

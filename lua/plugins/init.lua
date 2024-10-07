@@ -35,7 +35,7 @@ return {
     cmd = { "Template", "TemProject" },
     config = function()
       require("template").setup {
-        temp_dir = "~/AppData/Local/nvim/template",
+        temp_dir = "~/AppData/Local/nvim/lua/configs/template",
       }
     end,
   },
