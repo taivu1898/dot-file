@@ -12,7 +12,7 @@
   top: -6px !important;
 }
 
-/* Toolbars when tabs are enabled. */
+/* Toolbars when tabs are enabled.
 /* ------------ Title Bar ------------ */
 .monaco-workbench .part.titlebar {
   border-bottom: 1px solid #181c20 !important;

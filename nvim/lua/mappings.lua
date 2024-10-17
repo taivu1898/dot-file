@@ -1,12 +1,11 @@
 require "nvchad.mappings"
 
-local map = vim.keymap.set
+-- add yours here
 
-map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+local map = vim.keymap.set
 
 -- Template Cpp
 map("n", "main", "<cmd>Template main<cr>")
--- map("n", "ab", "<cmd>Template ab<cr>")
 
 -- Markdown Preview
 map("n", "<leader>mp", "<cmd>MarkdownPreview<cr>", { desc = "Markdown Preview" })
@@ -25,3 +24,6 @@ map("n", "<leader>mt", function()
   require("plenary.reload").reload_module "minty.huefy"
   require("minty.shades").open { border = false }
 end, { desc = "Color Shades" })
+
+-- For CP, DSA input, output file
+map("n", "<F5>", ":silent! :w<CR>:!pwsh -NoExit -WindowStyle Hidden -Command 'RunCode; exit'<CR>", { silent = true })

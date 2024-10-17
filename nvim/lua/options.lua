@@ -1,10 +1,8 @@
 require "nvchad.options"
 
--- add yours here!
-
 local o = vim.o
 o.cursorlineopt = "both" -- to enable cursorline!
-o.guifont = "JetBrainsMono Nerd Font:h14"
+o.guifont = "JetBrainsMono Nerd Font:h14" -- add :h14 for size of font
 
 -- For Neovide users in a Windows environment using pwsh
 if vim.fn.has "win32" == 1 then

@@ -5,6 +5,7 @@ local options = {
     css = { "prettier" },
     html = { "prettier" },
     javascript = { "prettier" },
+    typescript = { "prettier" },
     markdown = { "prettier" },
 
     c_cpp = { "clang-format" },
@@ -12,10 +13,11 @@ local options = {
     c = { "clang-format" },
 
     python = { "black" },
+
+    haskell = { "stylish-haskell" },
   },
 
   format_on_save = {
-    -- These options will be passed to conform.format()
     timeout_ms = 500,
     lsp_fallback = true,
   },

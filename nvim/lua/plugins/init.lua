@@ -6,13 +6,12 @@ return {
     event = "VeryLazy",
   },
 
-  -- Render Mardown
+  -- Auto tag
   {
-    "MeanderingProgrammer/render-markdown.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
-    event = { "BufRead", "BufWinEnter" },
+    "windwp/nvim-ts-autotag",
+    ft = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
     config = function()
-      require "configs.render-markdown"
+      require("nvim-ts-autotag").setup()
     end,
   },
 
@@ -78,12 +77,15 @@ return {
         "css",
         "javascript",
         "typescript",
+        "tsx",
         "markdown",
 
         "cpp",
         "c",
 
         "python",
+
+        "haskell",
       },
     },
   },
