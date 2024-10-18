@@ -9,6 +9,15 @@ vim.g.neovide_show_border = false
 vim.g.neovide_fullscreen = false
 -- vim.g.neovide_transparency = 0.9
 
+-- Disable line numbers for .txt files
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.txt",
+  callback = function()
+    vim.wo.number = false -- Disable absolute line numbers
+    vim.wo.relativenumber = false -- Disable relative line numbers
+  end,
+})
+
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
